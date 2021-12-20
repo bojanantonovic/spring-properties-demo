@@ -13,7 +13,6 @@ repositories {
 
 dependencies {
     implementation("org.springframework:spring-context:5.3.14")
-    implementation("org.springframework:spring-jdbc:5.3.14")
     testImplementation("org.springframework:spring-test:5.3.14")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.2")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.2")

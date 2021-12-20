@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- PropertyPlaceholderConfigurer is deprecated -->
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="classpath:person-configuration.properties"/>
+    </bean>
+
+    <bean class="Person">
+        <constructor-arg name="firstName" value="${first.name}"/>
+        <constructor-arg name="lastName" value="${last.name}"/>
+        <constructor-arg name="age" value="${age}"/>
+    </bean>
+
+</beans>
