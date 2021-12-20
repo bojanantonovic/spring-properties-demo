@@ -4,8 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!-- PropertyPlaceholderConfigurer is deprecated -->
-    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    <!-- PropertyPlaceholderConfigurer is deprecated since 5.2. That's why PropertySourcesPlaceholderConfigurer is used.-->
+    <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
         <property name="location" value="classpath:person-configuration.properties"/>
     </bean>
 
